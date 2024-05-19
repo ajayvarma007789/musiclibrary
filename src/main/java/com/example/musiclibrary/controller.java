@@ -1,56 +1,22 @@
 package com.example.musiclibrary;
 
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import java.io.IOException;
-import javafx.event.ActionEvent;
+import java.sql.*;
 
 public class controller {
+    public static void main(String[] args) {
+        String sql = "select title from songs where id=2";
+        String url = "jdbc:mysql://localhost:3306/music_library_management_system";
+        String username = "root";
+        String password = "password";
 
-    public Stage stage;
-
-    public controller(Stage stage) {
-        this.stage = stage;
-    }
-
-    @FXML
-    public void toPlaylist(ActionEvent event){
         try {
-            // Load view1.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Playlist.fxml"));
-            Parent root = loader.load();
-
-            // Create a new scene with the loaded FXML file
-            Scene scene = new Scene(root);
-
-            // Set the scene to the stage
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            Connection con = DriverManager.getConnection(url, username, password);
+            Statement st = con.createStatement();
+            st.executeQuery(sql);
+        }catch(SQLException e){
             e.printStackTrace();
         }
     }
-
-    @FXML
-    public void toSongs(ActionEvent event){
-        try {
-            // Load view2.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("music_library.fxml"));
-            Parent root = loader.load();
-
-           // Create a new scene with the loaded FXML file
-            Scene scene = new Scene(root);
-
-            // Set the scene to the stage
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-   }
 }
 
 
