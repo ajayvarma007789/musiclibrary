@@ -2,6 +2,7 @@ package com.example.musiclibrary;
 
 import java.sql.*;
 
+//jdbc connectivity: this is used to connect to the database 
 public class controller {
     public static void main(String[] args) {
         String sql = "select title from songs where song_id=2";
