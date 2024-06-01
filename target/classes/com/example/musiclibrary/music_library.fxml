@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musiclibrary.controller">
+    <style>
+        -fx-background-color:#000000;
+    </style>
+    <ToggleButton fx:id="toggleButton" layoutX="547.0" layoutY="16.0" mnemonicParsing="false" text="Playlist" />
+    <Label layoutX="7.0" text="SONGS">
+        <style>
+            -fx-text-fill:#efefef;
+            -fx-padding:20px;
+        </style>
+    </Label>
+    <TextField layoutX="785.0" layoutY="16.0" prefHeight="24.0" prefWidth="203.0" promptText="Search..." />
+    <Label layoutX="19.0" layoutY="60.0" text="#" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font></Label>
+    <Label layoutX="81.0" layoutY="60.0" text="Title" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+    <Label layoutX="594.0" layoutY="60.0" text="Genre" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+    <Label layoutX="717.0" layoutY="60.0" text="Duration" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+    <Label layoutX="864.0" layoutY="60.0" text="Add to Playlist" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+    <Label layoutX="482.0" layoutY="60.0" text="Artist" textFill="#9a9a9a">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+    <Line endX="816.0" endY="-96.0" layoutX="161.0" layoutY="183.0" startX="-142.0" startY="-96.0" stroke="9a9a9a" />
+    <ListView fx:id="List" layoutX="10.0" layoutY="94.0" prefHeight="494.0" prefWidth="979.0" />
+   <ChoiceBox layoutX="627.0" layoutY="16.0" prefWidth="150.0" />
+</AnchorPane>
