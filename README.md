@@ -1,10 +1,11 @@
 # Music Library Management System
 
 ## Overview
-`musiclibrary` is a Java application for managing a music collection with database support. It allows users to add, update, delete, and search music records.
+`musiclibrary` is a Java application for managing a music collection with database support. It allows users to see music records.
 
 ## Features
 - Database integration
+- java implementation
 
 ## Requirements
 - Java 8 or higher
